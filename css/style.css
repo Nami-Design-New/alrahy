@@ -209,7 +209,8 @@ span.select2.select2-container.select2-container--default {
   transition: all 0.3s ease-in-out;
   font-weight: lighter;
   top: unset;
-  bottom: 10px;
+  bottom: 50px;
+  z-index: 2;
 }
 
 @media (max-width: 767px) {
@@ -232,13 +233,18 @@ span.select2.select2-container.select2-container--default {
   border: 1px solid #ffffff;
 }
 
+.swiper-button-prev {
+  left: unset !important;
+  right: 30px !important;
+}
+
 .swiper-button-prev::after {
   content: "\f178" !important;
 }
 
 .swiper-button-next {
   left: unset !important;
-  right: 60px !important;
+  right: 80px !important;
 }
 
 .swiper-button-next::after {
@@ -295,7 +301,7 @@ span.select2.select2-container.select2-container--default {
   z-index: 999;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
-  background-color: #00000030;
+  background-color: #00000090;
   transition: all 0.3s ease-in-out;
   border: 1px solid #ffffff30;
 }
@@ -325,10 +331,12 @@ span.select2.select2-container.select2-container--default {
 }
 
 .mainNav .navbar-brand .logo {
-  height: 70px;
+  height: 60px;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -527,7 +535,7 @@ span.select2.select2-container.select2-container--default {
 }
 
 .animatedNav .navbar-brand .logo {
-  height: 60px;
+  height: 50px;
 }
 
 .MainSlider {
@@ -606,8 +614,8 @@ span.select2.select2-container.select2-container--default {
   width: 100px;
   height: 100px;
   background: url(../img/logo.png), #b11d29;
-  background-size: 70px;
-  background-position: center 5px;
+  background-size: 60px;
+  background-position: center 10px;
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
@@ -733,6 +741,22 @@ span.select2.select2-container.select2-container--default {
           animation-name: fadeInDown !important;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
+}
+
+.aboutUs {
+  padding: 70px 0;
+  position: relative;
+}
+
+.aboutUs::before {
+  content: '';
+  position: absolute;
+  top: -55px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  background: url(../img/shape2.png) no-repeat;
 }
 
 @media (min-width: 992px) {
