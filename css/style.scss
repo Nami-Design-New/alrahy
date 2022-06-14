@@ -540,7 +540,7 @@ span.select2.select2-container.select2-container--default {
         @media (max-width: 768px) {
           align-items: center;
           text-align: center;
-          padding: 100px 20px 70px 20px;
+          padding: 100px 20px 80px 20px;
         }
 
         &::after {
@@ -647,7 +647,7 @@ span.select2.select2-container.select2-container--default {
           object-fit: cover;
 
           @media (max-width: 768px) {
-            height: 60vh;
+            height: 50vh;
           }
         }
       }

@@ -583,7 +583,7 @@ span.select2.select2-container.select2-container--default {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    padding: 100px 20px 70px 20px;
+    padding: 100px 20px 80px 20px;
   }
 }
 
@@ -706,7 +706,7 @@ span.select2.select2-container.select2-container--default {
 
 @media (max-width: 768px) {
   .MainSlider .MainSlider-container .swiper-slide .sliderImg img {
-    height: 60vh;
+    height: 50vh;
   }
 }
 
