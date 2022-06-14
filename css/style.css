@@ -529,7 +529,6 @@ span.select2.select2-container.select2-container--default {
 .animatedNav {
   margin: 0;
   width: 100%;
-  background-color: #292929;
   border-radius: 0 0 24px 24px;
   border-color: transparent transparent #ffffff30 transparent;
 }
@@ -765,6 +764,17 @@ span.select2.select2-container.select2-container--default {
   background: url(../img/shape2.png) no-repeat;
 }
 
+.aboutUs::after {
+  content: '';
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  background: url(../img/shape.png) no-repeat;
+}
+
 .aboutUs .aboutInfo {
   padding: 50px 20px;
   color: #ffffff;
@@ -778,6 +788,12 @@ span.select2.select2-container.select2-container--default {
   color: #ffd700;
 }
 
+@media (max-width: 768px) {
+  .aboutUs .aboutInfo .aboutTitle {
+    font-size: 40px !important;
+  }
+}
+
 .aboutUs .aboutInfo .aboutText {
   line-height: 40px;
 }
@@ -786,9 +802,6 @@ span.select2.select2-container.select2-container--default {
   .aboutUs .aboutInfo {
     text-align: center;
     padding: 20px;
-  }
-  .aboutUs .aboutInfo .aboutTitle {
-    font-size: 40px !important;
   }
 }
 
@@ -815,6 +828,77 @@ span.select2.select2-container.select2-container--default {
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 24px;
+}
+
+.titleHint {
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 60px !important;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #ffd700;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px !important;
+  }
+}
+
+.newest {
+  padding: 100px 0 70px;
+  background: url(../img/BG.webp), #b11d29;
+  background-size: 500px 500px;
+  background-blend-mode: soft-light;
+  text-align: center;
+  position: relative;
+}
+
+.newest::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: url(../img/logo.png), #b11d29;
+  background-size: 60px;
+  background-position: center 10px;
+  background-repeat: no-repeat;
+  position: absolute;
+  border-radius: 100%;
+  border: 10px solid #2C2C2C;
+  z-index: 2;
+  outline: 10px solid #b11d29;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateY(50%) translateX(-50%);
+          transform: translateY(50%) translateX(-50%);
+}
+
+.newest .swiper-slide {
+  width: auto;
+}
+
+.newest .newestImg {
+  padding: 10px 10px;
+  border-radius: 16px;
+  display: block;
+}
+
+.newest .newestImg img {
+  border-radius: 16px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.services {
+  padding: 70px 0;
 }
 
 @media (min-width: 992px) {

@@ -494,7 +494,7 @@ span.select2.select2-container.select2-container--default {
 .animatedNav {
   margin: 0;
   width: 100%;
-  background-color: $black-color;
+  // background-color: $black-color;
   border-radius: 0 0 24px 24px;
   border-color: transparent transparent #ffffff30 transparent;
 
@@ -681,6 +681,7 @@ span.select2.select2-container.select2-container--default {
 .aboutUs {
   padding: 70px 0;
   position: relative;
+
   @media (max-width: 768px) {
     padding: 0 0 50px 0;
   }
@@ -696,31 +697,47 @@ span.select2.select2-container.select2-container--default {
     background: url(../img/shape2.png) no-repeat;
   }
 
-  .aboutInfo{
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    background: url(../img/shape.png) no-repeat;
+  }
+
+  .aboutInfo {
     padding: 50px 20px;
     color: $white-color;
-    .aboutTitle{
+
+    .aboutTitle {
       font-weight: bold;
       font-size: 60px !important;
       margin-bottom: 20px;
       text-transform: uppercase;
       color: $gold;
-     
-    }
-    .aboutText{
-      line-height: 40px;
-    }
-    @media (max-width: 768px) {
-      text-align: center;
-      padding: 20px;
-      .aboutTitle{
+
+      @media (max-width: 768px) {
         font-size: 40px !important;
       }
 
     }
+
+    .aboutText {
+      line-height: 40px;
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
+      padding: 20px;
+    }
   }
-  .aboutImg{
+
+  .aboutImg {
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -733,13 +750,83 @@ span.select2.select2-container.select2-container--default {
       z-index: -1;
       border-radius: 24px;
     }
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       border-radius: 24px;
     }
   }
+
+}
+
+.titleHint {
+  color: $white-color;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 60px !important;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: $gold;
+
+  @media (max-width: 768px) {
+    font-size: 40px !important;
+  }
+
+}
+
+.newest {
+  padding: 100px 0 70px;
+  background: url(../img/BG.webp), #b11d29;
+  background-size: 500px 500px;
+  background-blend-mode: soft-light;
+  text-align: center;
+position: relative;
+
+  &::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: url(../img/logo.png), $mainColor ;
+    background-size: 60px;
+    background-position: center 10px;
+    background-repeat: no-repeat;
+    position: absolute;
+    border-radius: 100%;
+    border: 10px solid #2C2C2C;
+    z-index: 2;
+    outline: 10px solid $mainColor;
+    transition: $transition;
+    bottom: 0px;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
+  }
+
+
+  .swiper-slide {
+    width: auto;
+  }
+
+  .newestImg {
+    padding: 10px 10px;
+    border-radius: 16px;
+    display: block;
+
+    img {
+      border-radius: 16px;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+    }
+  }
+}
+
+.services {
+  padding: 70px 0;
 
 }
 

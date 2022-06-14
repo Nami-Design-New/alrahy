@@ -22,6 +22,38 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
   });
+    //newest Slider
+    var swiper = new Swiper('.newestSlider', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // centeredSlides: true,
+      loop: true,
+      // slidesPerView: 'auto',
+      // spaceBetween: 5,
+      speed: 1500,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          
+        },
+        360: {
+          slidesPerView: 2,
+          
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      },
+    });
   // AOS
   AOS.init({
     offset: 70, // offset (in px) from the original trigger point
