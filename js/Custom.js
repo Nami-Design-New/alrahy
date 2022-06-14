@@ -25,7 +25,6 @@ $(document).ready(function () {
   // AOS
   AOS.init({
     offset: 70, // offset (in px) from the original trigger point
-
   });
   //spinner
   $(".spinner ").fadeOut("slow");
