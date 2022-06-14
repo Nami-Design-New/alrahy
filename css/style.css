@@ -748,6 +748,12 @@ span.select2.select2-container.select2-container--default {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .aboutUs {
+    padding: 40px 0;
+  }
+}
+
 .aboutUs::before {
   content: '';
   position: absolute;
@@ -774,6 +780,16 @@ span.select2.select2-container.select2-container--default {
 
 .aboutUs .aboutInfo .aboutText {
   line-height: 40px;
+}
+
+@media (max-width: 768px) {
+  .aboutUs .aboutInfo {
+    text-align: center;
+    padding: 20px;
+  }
+  .aboutUs .aboutInfo .aboutTitle {
+    font-size: 40px !important;
+  }
 }
 
 .aboutUs .aboutImg {
