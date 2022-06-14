@@ -722,7 +722,6 @@ span.select2.select2-container.select2-container--default {
       @media (max-width: 768px) {
         font-size: 40px !important;
       }
-
     }
 
     .aboutText {
@@ -758,7 +757,6 @@ span.select2.select2-container.select2-container--default {
       border-radius: 24px;
     }
   }
-
 }
 
 .titleHint {
@@ -776,7 +774,6 @@ span.select2.select2-container.select2-container--default {
   @media (max-width: 768px) {
     font-size: 40px !important;
   }
-
 }
 
 .newest {
@@ -785,7 +782,7 @@ span.select2.select2-container.select2-container--default {
   background-size: 500px 500px;
   background-blend-mode: soft-light;
   text-align: center;
-position: relative;
+  position: relative;
 
   &::before {
     content: "";
@@ -805,7 +802,6 @@ position: relative;
     left: 50%;
     transform: translateY(50%) translateX(-50%);
   }
-
 
   .swiper-slide {
     width: auto;
@@ -828,6 +824,76 @@ position: relative;
 .services {
   padding: 70px 0;
 
+  .singleService {
+    display: block;
+    box-shadow: 5px 5px 15px #242424, -5px -5px 15px #2f2d2d;
+    background-color: #292929;
+    border-radius: 16px;
+    color: $white-color;
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+
+    .serviceImg {
+      img {
+        width: 100%;
+        border-radius: 16px;
+        object-fit: cover;
+        height: 300px;
+      }
+    }
+
+    .serviceInfo {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 20px;
+      z-index: 1;
+      background: linear-gradient(to bottom, #00000000 0%, #000000b5 70%);
+      border-radius: 16px;
+      transition: .5s ease-in-out;
+
+
+      .serviceTitle {
+        color: $gold;
+        font-weight: bold;
+        margin-bottom: 10px;
+        transition: .5s ease-in-out;
+        position: relative;
+        bottom: 0;
+
+      }
+
+      .serviceText {
+        transition: .5s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        bottom: -100%;
+        height: 0;
+      }
+    }
+
+    &:hover {
+      .serviceInfo {
+        .serviceText {
+          opacity: 1;
+          visibility: visible;
+          position: relative;
+          bottom: 0;
+          height: 30px;
+
+        }
+      }
+
+
+    }
+  }
 }
 
 // //////////////////////////////////////////==================
