@@ -424,10 +424,10 @@
     $('footer').load("Footer.html");
     var $filter = $('.btn').click(function () {
       if (this.id == 'all') {
-        $('#filterContent > div').fadeIn(450);
+        $('#filterContent > .product').fadeIn(450);
       } else {
         var $item = $('.' + this.id).fadeIn(450);
-        $('#filterContent > div').not($item).hide();
+        $('#filterContent > .product').not($item).hide();
       }
       $filter.removeClass('active');
       $(this).addClass('active');
