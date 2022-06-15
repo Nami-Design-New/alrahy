@@ -1140,6 +1140,16 @@ span.select2.select2-container.select2-container--default {
   min-height: 48px;
   background-color: #b11d29;
   min-width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 24px;
 }
 
 @media (min-width: 992px) {
