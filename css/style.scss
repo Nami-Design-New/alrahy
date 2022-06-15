@@ -892,39 +892,93 @@ span.select2.select2-container.select2-container--default {
   }
 }
 
-.products {
-  padding: 70px 0;
 
-  #filterBtns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.product {
+  border-radius: 16px;
+  display: block;
+  background-color: #141414;
+  color: $white-color;
+  transition: $transition;
+  text-align: center;
+  position: relative;
+  border: 3px solid $black-color;
+  padding-bottom: 10px;
 
-    .btn {
-      padding: 10px 20px;
-      color: $white-color;
-      margin: 5px;
-      background-color: $mainColor;
-      transition: $transition;
+  // height: 100%;
+  img {
+    min-width: 207px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    filter: brightness(0.8);
+    transition: $transition;
+  }
 
-      &.active {
-        background-color: $gold;
-        color: $black-color;
-      }
+  &:hover {
+    img {
+      filter: brightness(1);
     }
   }
 
+  .productTitle {
+    padding: 0px 10px;
+  }
+
+  .price {
+    position: absolute;
+    border: 2px solid $gold;
+    top: 10px;
+    left: 10px;
+    background-color: $mainColor;
+    padding: 4px 16px;
+    min-width: 50px;
+    text-align: center;
+    border-radius: 100px;
+    color: $white-color;
+    font-size: smaller;
+    box-shadow: $shadow;
+
+    span {
+      font-weight: bold;
+      color: $gold;
+      font-size: larger;
+    }
+  }
+}
+
+
+#filterBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .btn {
+    padding: 10px 20px;
+    color: $white-color;
+    margin: 5px;
+    background-color: $mainColor;
+    transition: $transition;
+
+    &.active {
+      background-color: $gold;
+      color: $black-color;
+    }
+  }
+}
+
+.products {
+  padding: 70px 0;
+
+
   #filterContent {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(207px, 1fr));
     grid-gap: 10px;
     grid-auto-flow: column;
     grid-template-rows: 1fr 1fr;
     transition: $transition;
-
- 
-
     // display: flex;
     // flex-wrap: nowrap;
     // width: 100%;
@@ -934,65 +988,10 @@ span.select2.select2-container.select2-container--default {
     width: 100%;
     padding: 50px 0 20px;
 
-    .product {
-      border-radius: 16px;
-      display: block;
-      background-color: #141414;
-      color: $white-color;
-      transition: $transition;
-      text-align: center;
-      position: relative;
-      border: 3px solid $black-color;
-      padding-bottom: 10px;
-
-
-      // height: 100%;
-      img {
-        min-width: 200px;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        border-radius: 16px;
-        margin-bottom: 10px;
-        filter: brightness(0.8);
-        transition: $transition;
-      }
-
-      &:hover {
-        img {
-          filter: brightness(1);
-        }
-      }
-
-      .productTitle {
-        padding: 0px 10px;
-      }
-
-      .price {
-        position: absolute;
-        border: 2px solid $gold;
-        top: 10px;
-        left: 10px;
-        background-color: $mainColor;
-        padding: 4px 16px;
-        min-width: 50px;
-        text-align: center;
-        border-radius: 100px;
-        color: $white-color;
-        font-size: smaller;
-        box-shadow: $shadow;
-
-        span {
-          font-weight: bold;
-          color: $gold;
-          font-size: larger;
-        }
-
-
-      }
-    }
     @media (max-width: 576px) {
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      .product{
+
+      .product {
         img {
           min-width: 160px;
         }
@@ -1001,6 +1000,51 @@ span.select2.select2-container.select2-container--default {
   }
 }
 
+.productsPage {
+  padding: 200px 0 70px 0;
+
+ 
+  #filterContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(207px, 1fr));
+    grid-gap: 10px;
+    transition: $transition;
+    grid-gap: 10px;
+    width: 100%;
+    padding: 50px 0 20px;
+
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+      .product {
+        img {
+          min-width: 160px;
+        }
+      }
+    }
+  }
+}
+
+:target {
+  scroll-margin-top: 70px;
+}
+
+.search{
+  margin-bottom: 30px;
+  .form-control{
+    min-height: 48px;
+    background-color: #292929;
+    border: 2px solid $mainColor;
+    color: $white-color;
+    outline: none !important;
+  }
+
+  .btn-danger{
+    min-height: 48px;
+background-color: $mainColor;
+min-width: 70px;
+  }
+}
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

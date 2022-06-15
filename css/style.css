@@ -976,57 +976,7 @@ span.select2.select2-container.select2-container--default {
   transition: .5s ease-in-out;
 }
 
-.products {
-  padding: 70px 0;
-}
-
-.products #filterBtns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.products #filterBtns .btn {
-  padding: 10px 20px;
-  color: #ffffff;
-  margin: 5px;
-  background-color: #b11d29;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.products #filterBtns .btn.active {
-  background-color: #ffd700;
-  color: #292929;
-}
-
-.products #filterContent {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 10px;
-  grid-auto-flow: column;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-  overflow-x: auto;
-  grid-gap: 10px;
-  width: 100%;
-  padding: 50px 0 20px;
-}
-
-.products #filterContent .product {
+.product {
   border-radius: 16px;
   display: block;
   background-color: #141414;
@@ -1039,8 +989,8 @@ span.select2.select2-container.select2-container--default {
   padding-bottom: 10px;
 }
 
-.products #filterContent .product img {
-  min-width: 200px;
+.product img {
+  min-width: 207px;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1052,16 +1002,16 @@ span.select2.select2-container.select2-container--default {
   transition: all 0.3s ease-in-out;
 }
 
-.products #filterContent .product:hover img {
+.product:hover img {
   -webkit-filter: brightness(1);
           filter: brightness(1);
 }
 
-.products #filterContent .product .productTitle {
+.product .productTitle {
   padding: 0px 10px;
 }
 
-.products #filterContent .product .price {
+.product .price {
   position: absolute;
   border: 2px solid #ffd700;
   top: 10px;
@@ -1077,10 +1027,60 @@ span.select2.select2-container.select2-container--default {
           box-shadow: 0px 2px 4px #00000030;
 }
 
-.products #filterContent .product .price span {
+.product .price span {
   font-weight: bold;
   color: #ffd700;
   font-size: larger;
+}
+
+#filterBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#filterBtns .btn {
+  padding: 10px 20px;
+  color: #ffffff;
+  margin: 5px;
+  background-color: #b11d29;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#filterBtns .btn.active {
+  background-color: #ffd700;
+  color: #292929;
+}
+
+.products {
+  padding: 70px 0;
+}
+
+.products #filterContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(207px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(207px, 1fr));
+  grid-gap: 10px;
+  grid-auto-flow: column;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  overflow-x: auto;
+  grid-gap: 10px;
+  width: 100%;
+  padding: 50px 0 20px;
 }
 
 @media (max-width: 576px) {
@@ -1091,6 +1091,55 @@ span.select2.select2-container.select2-container--default {
   .products #filterContent .product img {
     min-width: 160px;
   }
+}
+
+.productsPage {
+  padding: 200px 0 70px 0;
+}
+
+.productsPage #filterContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(207px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(207px, 1fr));
+  grid-gap: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  grid-gap: 10px;
+  width: 100%;
+  padding: 50px 0 20px;
+}
+
+@media (max-width: 576px) {
+  .productsPage #filterContent {
+    -ms-grid-columns: (minmax(160px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+  .productsPage #filterContent .product img {
+    min-width: 160px;
+  }
+}
+
+:target {
+  scroll-margin-top: 70px;
+}
+
+.search {
+  margin-bottom: 30px;
+}
+
+.search .form-control {
+  min-height: 48px;
+  background-color: #292929;
+  border: 2px solid #b11d29;
+  color: #ffffff;
+  outline: none !important;
+}
+
+.search .btn-danger {
+  min-height: 48px;
+  background-color: #b11d29;
+  min-width: 70px;
 }
 
 @media (min-width: 992px) {
