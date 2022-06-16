@@ -54,6 +54,21 @@ $(document).ready(function () {
       },
     },
   });
+  //testimonials Slider
+  var swiper = new Swiper(".testimonials-swiper", {
+    effect: "cards",
+    grabCursor: true,
+    speed: 500,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+  });
+
   // filter
   var $filter = $('.btn').click(function () {
     if (this.id == 'all') {
