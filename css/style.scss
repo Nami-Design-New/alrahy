@@ -909,6 +909,9 @@ span.select2.select2-container.select2-container--default {
       // height: 400px;
       object-fit: cover;
       border-radius: 10px;
+      @media (max-width:768px) {
+        aspect-ratio: unset;
+      }
     }
   }
 
@@ -929,12 +932,14 @@ span.select2.select2-container.select2-container--default {
     justify-content: center;
     align-items: center;
     font-size: 60px !important;
-    text-shadow: -3px -4px 0px #000000;
+    text-shadow: -3px -4px 0px $mainColor;
     @media (max-width:768px) {
       font-size:40px !important;
       writing-mode: horizontal-tb;
       transform: unset;
       height: auto;
+      text-shadow: 3px 4px 0px $mainColor;
+
     }
 
   }

@@ -991,6 +991,12 @@ span.select2.select2-container.select2-container--default {
   border-radius: 10px;
 }
 
+@media (max-width: 768px) {
+  .offers .sliderImg img {
+    aspect-ratio: unset;
+  }
+}
+
 .offers .offerTitle {
   background: url(../img/BG.webp), #ffd700;
   background-size: 500px 500px;
@@ -1017,7 +1023,7 @@ span.select2.select2-container.select2-container--default {
       -ms-flex-align: center;
           align-items: center;
   font-size: 60px !important;
-  text-shadow: -3px -4px 0px #000000;
+  text-shadow: -3px -4px 0px #b11d29;
 }
 
 @media (max-width: 768px) {
@@ -1029,6 +1035,7 @@ span.select2.select2-container.select2-container--default {
     -webkit-transform: unset;
             transform: unset;
     height: auto;
+    text-shadow: 3px 4px 0px #b11d29;
   }
 }
 
