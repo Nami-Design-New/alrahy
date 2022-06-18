@@ -22,6 +22,56 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
   });
+  // // offersSlider
+  // var swiper = new Swiper('.', {
+  //   spaceBetween: 0,
+  //   centeredSlides: true,
+  //   loop: true,
+  //   // effect: 'fade',
+  //   speed: 500,
+  //   autoplay: {
+  //     delay: 6000,
+  //     disableOnInteraction: false,
+  //   },
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     clickable: true,
+  //   },
+  //   keyboard: {
+  //     enabled: true,
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  // });
+
+  var swiper4 = new Swiper(".offersSlider", {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -800],
+        rotate: [180, 0, 0],
+      },
+      next: {
+        shadow: true,
+        translate: [0, 0, -800],
+        rotate: [-180, 0, 0],
+      },
+    },
+    speed: 500,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
   //newest Slider
   var swiper = new Swiper('.newestSlider', {
     navigation: {
